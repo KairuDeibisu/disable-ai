@@ -1,0 +1,16 @@
+/* Hide Bing AI/Copilot generated search-summary cards */
+.b_wpt_container:has([data-dataurl*="IsGeneratedContent=True"]),
+.b_wpt_container:has(.rd_gencon_ai),
+.b_wpt_container:has(.developer_answercard_wrapper .rd_summary_info),
+.b_wpt_container:has(.devmag_card_content [data-dataurl*="IsGeneratedContent=True"]),
+.b_ans:has([data-dataurl*="IsGeneratedContent=True"]) {
+    display: none;
+}
+
+/* Hide Bing Copilot / chat entry points in search navigation */
+#b-scopeListItem-conv,
+#b-scopeListItem-chat,
+li:has(a[href*="/chat"]),
+li:has(a[href*="copilot.microsoft.com"]) {
+    display: none;
+}
