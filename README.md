@@ -4,7 +4,7 @@ This is a browser extension to disable AI features on various sites and search e
 Our goal is not to just hide AI-powered results on websites and search engines like other extensions, but to actually stop the browser or server requests that run behind the scenes. Otherwise resources are still consumed by AI to generate results, even if they are hidden visually.
 
 **Search Engines Supported:**  
-Brave Search, DuckDuckGo, Ecosia, Google, Qwant
+Bing, Brave Search, DuckDuckGo, Ecosia, Google, Qwant
 
 ## How to Install
 - Firefox and Firefox for Android: [Official Firefox Add-ons link](https://addons.mozilla.org/en-US/firefox/addon/disable-ai/)
@@ -12,6 +12,9 @@ Brave Search, DuckDuckGo, Ecosia, Google, Qwant
 - Edge: [Official Edge Add-ons link](https://microsoftedge.microsoft.com/addons/detail/disable-ai/onjmmgdkdkpmjdlaekdklibbjcepcagi)
 
 ## How it Works
+
+### Bing
+We hide Bing's AI-generated summary cards and Copilot/chat entry points on Bing search pages. Bing AI summaries can be served as generated markup in the initial results page, so this currently targets the generated-content containers and AI attribution markers rather than a stable URL parameter.
 
 ### Brave Search
 We disable Brave Search's `Answer with AI` by adding the `summary=0` url parameter to the main Brave Search URL. We also hide the `Answer with AI` button in the search bar next to the search icon, and the Answer with AI search suggestion.
